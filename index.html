@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Games & Other Web Apps</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!--
+        Author: Nikola Petrovski 
+        Date created: 29 VI 2017
+        Date updated: 08 VII 2017
+        Version: 1
+        Purpose: A members-only site to play a variety of games, with 
+		opportunity to play against their best, against machine, and 
+		participate in tournaments playing against other members. 
+		(This version does not provide networking different machines).
+		Organizes the previously completed JavaScript projects 
+		(TicTacToe, Ultimate TicTacToe and Rock-Paper-Scissors).
+		Website template:
+		[Source: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_portfolio&stacked=h]
+		Five-star rating for each game card:
+		[Source: http://codepen.io/Funstarter/pen/pJZooM]
+		-->				
+		
+		<style>
+			body,h1,h2,h3,h4,h5,h6 {
+				font-family: "Raleway", sans-serif;
+			}
+			.w3-light-grey,
+			.w3-content {
+				max-width: 1600px;
+			}
+			.w3-sidebar {
+				z-index: 3;
+				width: 300px;
+			}
+			.removeButton {
+				display: block;
+			}
+			/*A rule that has the !important property will 
+			always be applied no matter where that rule appears in 
+			the CSS document.*/
+			.w3-jumbo {
+				font-size: 15px!important;
+			}
+			.logoPlaceholder {
+				text-align: center;
+				margin: 60px 0 10px 0;
+				font-size: 1.6em;
+				padding-bottom: 4px;
+			}
+			hr {
+				display: block;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				margin-left: auto;
+				margin-right: auto;
+				border-style: inset;
+				border-width: 2px;
+				color: #fff;
+			}
+			.loginMemberButtons {
+				height: 60px;
+				padding-top: 10px;
+			}
+			.smallCursor {
+				cursor: pointer;
+			}
+			.w3-main {
+				margin-left: 300px;
+			}
+			.w3-third img,
+			.w3-col img {
+				width: 100%;
+			}
+			.noteworthy {
+				text-align: justify;
+				padding-right: 15px!important;
+			}
+			.imgPhaser {
+				float: left;
+				width: 100px!important;
+				padding: 5px 10px;
+			}
+			.tags-margin-bottom {
+				margin-bottom: 5px;
+			}
+			/************ Links Style *************/
+			.sideLinks a:link {
+				color: orange;
+			}
+			.sideLinks a:visited {
+				color: orange;
+			}
+			.socialMedia {
+				color: orange!important;
+			}
+			 /************ Buttons Style ************/
+			.btn {
+				color: #fff;
+				font-size: 14px;
+				padding: 10px 20px 10px 20px;
+				text-decoration: none;
+			}
+			.btn:hover {
+				text-decoration: none;
+			}
+			.btnLogin {
+				color: #ffffff;
+				background: none;
+				margin-left: 10px;
+				float: left;
+			}
+			.btnLogin:hover {
+				color: gray;
+			}
+			.btnMember {
+				background: gray;
+				margin-right: 10px;
+				float: right;
+			}
+			.btnMember:hover {
+				background: gray;
+				color: #000;
+			}
+			/********** Star Rating Styles **********/
+			.star-rating {
+				font-size: 0;
+				padding-bottom: 20px;
+				float: right;
+			}
+			.star-rating__wrap {
+				display: inline-block;
+				font-size: 1rem;
+			}
+			.star-rating__wrap:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.star-rating__ico {
+				float: right;
+				padding-left: 2px;
+				cursor: pointer;
+				color: #FFB300;
+			}
+			.star-rating__ico:hover:before,
+			.star-rating__ico:hover ~ .star-rating__ico:before,
+			.star-rating__input:checked ~ .star-rating__ico:before {
+			content: "\f005";
+			}
+			.star-rating__input {
+				display: none;
+			}
+			.star-rating__ico:last-child {
+				padding-left: 0;
+			}
+			/***************** blog and stats links****************/
+			.message-stats {
+				float: right;
+				padding-left: 1px;
+				cursor: pointer;
+				color: grey;
+			}
+			.comment-stats-wrap {
+				padding-left: 10px;
+			}
+			.fa-bar-chart-o {
+				padding-left: 5px;
+			}
+			@media screen and (max-width: 640px) and (min-width: 601px) {
+				.star-rating__wrap {
+				float: right;
+				}
+				.comment-stats-wrap {
+					padding-top: 10px;
+					float: right;
+				}
+			}
+			
+		</style>
+		
+</head>
+<body class="w3-light-grey w3-content">
+	<!-- Sidebar/menu.. changed color from white to black -->
+	<nav class="w3-sidebar w3-collapse w3-black w3-animate-left" 
+			id="mySidebar"><br>
+		<!-- Hamburger inferface -->
+		<div class="w3-container">
+			<a href="#" onclick="w3_close()" 
+				class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" 
+				title="close menu">
+				<!-- display block -->
+				<div class="removeButton"><i class="fa fa-remove"></i>
+				</div>
+			</a>
+			<!-- FIXME: Leave the logo as plain text for now-->
+			<div class="logoPlaceholder">
+				<h2><b>GAMES</b></h2>
+				<h5>& OTHER WEB APPS</h5>
+			</div>
+			<!-- Removed reference: Template by W3.css -->
+			<hr>
+			<!-- Added buttons for "LOGIN" & "Membership" -->
+			<div class="loginMemberButtons">
+				<!-- TODO: "LOGIN" button will toggle to "LOGOUT" when 
+				members login in (once we implement the login form) and 
+				back to "LOGIN" when they log out. -->
+				<a class="btn btnLogin" href="#">LOGIN</a>
+				<!-- TODO: "Membership" button will display a Registration form
+				when not a member, and Account management page when they log in. -->
+				<a class="btn btnMember" href="#">
+				<i class="fa fa-id-card w3-margin-right"></i> Membership</a>
+			</div>
+		</div>
+		<!-- Added button for "NOTEWOTRTHY" & changed font awesome -->
+		<div class="w3-bar-block sideLinks">
+			<!-- Sidebar/menu.. changed text color from teal to orange -->
+			<a href="#jsgames" onclick="w3_close()" 
+				class="w3-bar-item w3-button w3-padding w3-text-orange">
+				<i class="fa fa-gamepad fa-fw w3-margin-right"></i>
+				JAVASCRIPT GAMES</a> 
+			<a href="#phpgames" onclick="w3_close()" 
+				class="w3-bar-item w3-button w3-padding">
+				<i class="fa fa-gamepad fa-fw w3-margin-right"></i>
+				PHP GAMES</a> 
+			<a href="#otherapps" onclick="w3_close()" 
+				class="w3-bar-item w3-button w3-padding">
+				<i class="fa fa-th-large fa-fw w3-margin-right"></i>
+				OTHER APPS</a>
+			<a href="#news" onclick="w3_close()" 
+				class="w3-bar-item w3-button w3-padding">
+				<i class="fa fa-newspaper-o fa-fw w3-margin-right"></i>
+				NOTEWORTHY</a>
+		</div>
+		<div class="w3-panel w3-large socialMedia">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+			<i class="fa fa-linkedin w3-hover-opacity"></i>
+		</div>
+	</nav>
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity smallCursor" 
+			onclick="w3_close()"  title="close side menu" id="myOverlay">
+	</div>
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main">
+		<!-- Header removed portfolio image. -->
+		<header>
+			<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" 
+					onclick="w3_open()"><i class="fa fa-bars"></i></span>
+			<div class="w3-container">
+			<h1><b>Games & Other Web Apps</b></h1>
+			</div>
+			<!-- Removed "Filter" navigation from template. -->
+		</header>
+		<!-- First Photo Grid-->
+		<div class="w3-row-padding" id="jsgames">
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="../assign4/content/ttt/index.html"><img 
+					src="images/ttt.png" alt="TicTacToe" 
+					class="w3-hover-opacity">
+				</a>
+				<div class="w3-container w3-white">
+					<p><b>Play Tic Tac Toe!</b></p>
+					<p>A game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+					<!-- Template add: 5-star rating, blog and status links
+					     [Source: http://codepen.io/Funstarter/pen/pJZooM] -->
+					<div class="star-rating">
+						<div class="star-rating__wrap">
+							<input class="star-rating__input" id="star-rating-5" 
+								type="radio" name="rating1" value="5">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+								for="star-rating-5" title="5 out of 5 stars">
+								</label>
+							<input class="star-rating__input" id="star-rating-4" 
+								type="radio" name="rating1" value="4">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+								for="star-rating-4" title="4 out of 5 stars">
+								</label>
+							<input class="star-rating__input" id="star-rating-3" 
+								type="radio" name="rating1" value="3">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+								for="star-rating-3" title="3 out of 5 stars">
+								</label>
+							<input class="star-rating__input" id="star-rating-2" 
+								type="radio" name="rating1" value="2">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+								for="star-rating-2" title="2 out of 5 stars">
+								</label>
+							<input class="star-rating__input" id="star-rating-1" 
+								type="radio" name="rating1" value="1">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+								for="star-rating-1" title="1 out of 5 stars">
+								</label>
+						</div>
+						<div class="star-rating__wrap comment-stats-wrap">
+							<label class="message-stats fa fa-bar-chart-o fa-lg" 
+								title="bar-chart"></label>
+							<label class="message-stats fa fa-comments fa-lg" 
+								title="comments"></label>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third w3-container w3-margin-bottom">
+				<a href="../assign4/content/tttUtl/index.html">
+					<img src="images/uttt.png" alt="UltimateTicTacToe" 
+						class="w3-hover-opacity">
+				</a>
+				<div class="w3-container w3-white">
+					<p><b>Play Ultimate Tic Tac Toe!</b>
+					</p>
+					<p>Ultimate tic-tac-toe is board game composed of nine tic-tac-toe boards arranged in 3-by-3 grid. Players take turns playing in smaller tic-tac-toe boards until one of them wins in larger tic-tac-toe board.</p>
+					<!-- Template add: 5-star rating, blog and status links
+					     [Source: http://codepen.io/Funstarter/pen/pJZooM] -->
+					<div class="star-rating">
+						<div class="star-rating__wrap">
+							<input class="star-rating__input" id="star-rating-5-2" 
+							type="radio" name="rating2" value="5">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-5-2" title="5 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-4-2" 
+							type="radio" name="rating2" value="4">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-4-2" title="4 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-3-2" 
+							type="radio" name="rating2" value="3">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-3-2" title="3 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-2-2" 
+							type="radio" name="rating2" value="2">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-2-2" title="2 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-1-2" 
+							type="radio" name="rating2" value="1">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-1-2" title="1 out of 5 stars"></label>
+						</div>
+						<div class="star-rating__wrap comment-stats-wrap">
+							<label class="message-stats fa fa-bar-chart-o fa-lg" 
+								title="bar-chart"></label>
+							<label class="message-stats fa fa-comments fa-lg" 
+								title="comments"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third w3-container">
+				<a href="../assign4/content/rps/index.html">
+					<img src="images/rps.png" 
+						alt="Rock Paper Scissors" class="w3-hover-opacity">
+				</a>
+				<div class="w3-container w3-white">
+					<p><b>Play Rock Paper Scissors!</b></p>
+					<p>Test your strategy against the computer in this rock-paper-scissors game illustrating basic artificial intelligence. The Rock beats Scissors, the Scissors beat Paper and the Paper beats Rock.</p>
+					<!-- Template add: 5-star rating, blog and status links
+					     [Source: http://codepen.io/Funstarter/pen/pJZooM] -->
+					<div class="star-rating">
+						<div class="star-rating__wrap">
+							<input class="star-rating__input" id="star-rating-5-3" 
+							type="radio" name="rating3" value="5">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-5-3" title="5 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-4-3" 
+							type="radio" name="rating3" value="4">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-4-3" title="4 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-3-3" 
+							type="radio" name="rating3" value="3">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-3-3" title="3 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-2-3" 
+							type="radio" name="rating3" value="2">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-2-3" title="2 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-1-3" 
+							type="radio" name="rating3" value="1">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-1-3" title="1 out of 5 stars"></label>
+						</div>
+						<div class="star-rating__wrap comment-stats-wrap">
+							<label class="message-stats fa fa-bar-chart-o fa-lg" 
+								title="bar-chart"></label>
+							<label class="message-stats fa fa-comments fa-lg" 
+								title="comments"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Second Photo Grid-->
+		<div class="w3-row-padding">
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="images/go.jpg" alt="ComingSoon" 
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Coming Soon</b></p>
+					<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae 
+						justo condimentum, porta lectus vitae, ultricies 
+						congue gravida diam non fringilla.</p>
+					<!-- Template add: 5-star rating, blog and status links
+					     [Source: http://codepen.io/Funstarter/pen/pJZooM] -->
+					<div class="star-rating">
+						<div class="star-rating__wrap">
+							<input class="star-rating__input" id="star-rating-5-4" 
+							type="radio" name="rating" value="5">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-5-4" title="5 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-4-4" 
+							type="radio" name="rating4" value="4">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-4-4" title="4 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-3-4" 
+							type="radio" name="rating4" value="3">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-3-4" title="3 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-2-4" 
+							type="radio" name="rating4" value="2">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-2-4" title="2 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-1-4" 
+							type="radio" name="rating4" value="1">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-1-4" title="1 out of 5 stars"></label>
+						</div>
+						<div class="star-rating__wrap comment-stats-wrap">
+							<label class="message-stats fa fa-bar-chart-o fa-lg" 
+								title="bar-chart"></label>
+							<label class="message-stats fa fa-comments fa-lg" 
+								title="comments"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="images/go.jpg" alt="ComingSoon" 
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Coming Soon</b>
+					</p>
+					<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae 
+					justo condimentum, porta lectus vitae, ultricies congue 
+					gravida diam non fringilla.</p>
+					<!-- Template add: 5-star rating, blog and status links
+					     [Source: http://codepen.io/Funstarter/pen/pJZooM] -->
+					<div class="star-rating">
+						<div class="star-rating__wrap">
+							<input class="star-rating__input" id="star-rating-5-5" 
+							type="radio" name="rating5" value="5">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-5-5" title="5 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-4-5" 
+							type="radio" name="rating5" value="4">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-4-5" title="4 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-3-5" 
+							type="radio" name="rating5" value="3">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-3-5" title="3 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-2-5" 
+							type="radio" name="rating5" value="2">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-2-5" title="2 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-1-5" 
+							type="radio" name="rating5" value="1">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-1-5" title="1 out of 5 stars"></label>
+						</div>
+						<div class="star-rating__wrap comment-stats-wrap">
+							<label class="message-stats fa fa-bar-chart-o fa-lg" 
+								title="bar-chart"></label>
+							<label class="message-stats fa fa-comments fa-lg" 
+								title="comments"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third w3-container">
+				<img src="images/go.jpg" alt="ComingSoon" class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Coming Soon</b>
+					</p>
+					<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae 
+					justo condimentum, porta lectus vitae, ultricies congue 
+					gravida diam non fringilla.</p>
+					<!-- Template add: 5-star rating, blog and status links
+					     [Source: http://codepen.io/Funstarter/pen/pJZooM] -->
+					<div class="star-rating">
+						<div class="star-rating__wrap">
+							<input class="star-rating__input" id="star-rating-5-6" 
+							type="radio" name="rating6" value="5">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-5-6" title="5 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-4-6" 
+							type="radio" name="rating6" value="4">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-4-6" title="4 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-3-6" 
+							type="radio" name="rating6" value="3">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-3-6" title="3 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-2-6" 
+							type="radio" name="rating6" value="2">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-2-6" title="2 out of 5 stars"></label>
+							<input class="star-rating__input" id="star-rating-1-6" 
+							type="radio" name="rating6" value="1">
+							<label class="star-rating__ico fa fa-star-o fa-lg" 
+							for="star-rating-1-6" title="1 out of 5 stars"></label>
+						</div>
+							<div class="star-rating__wrap comment-stats-wrap">
+								<label class="message-stats fa fa-bar-chart-o fa-lg" 
+								title="bar-chart"></label>
+								<label class="message-stats fa fa-comments fa-lg" 
+								title="comments"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Template removed all sections from: Pagination to Contact. -->
+		<!-- Footer -->
+		<footer class="w3-container w3-padding-32 w3-dark-grey">
+			<div class="w3-row-padding">
+				<div class="w3-third noteworthy" id="news">
+					<h3>NOTEWORTHY</h3>
+					<img src="images/phaser.png" alt="Phaser" 
+							class="w3-hover-opacity imgPhaser">
+					<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae 
+					justo condimentum, porta lectus vitae, ultricies congue 
+					gravida diam non fringilla.</p>
+				</div>
+				<div class="w3-twoNNNthird">
+					<h3>BLOG POSTS</h3>
+					<ul class="w3-ul w3-hoverable">
+						<li class="w3-padding-16">
+							<span class="w3-large">Lorem</span><br>
+							<span class="w3-tag w3-black 
+								w3-small tags-margin-bottom">Play</span>
+							<span class="w3-tag w3-grey 
+								w3-small tags-margin-bottom">News</span>
+							<span class="w3-tag w3-transparent 
+								w3-small tags-margin-bottom">Games</span>
+							<br>
+							<span>Sed mattis nunc</span>
+						</li>
+						<li class="w3-padding-16">
+							<span class="w3-large">Ipsum</span><br>
+							<span>Praes tinci sed</span>
+						</li> 
+					</ul>
+				</div>
+				<!-- Template removed Popular Tags. -->
+			</div>
+		</footer>
+		<div class="w3-black w3-center w3-padding-24">
+			NIkola Petrovski, 2017 &copy; SYST10199 Web Programming, 
+			<a href="https://www.sheridancollege.ca/" target="_blank">Sheridan College</a> 
+			Powered by 
+			<a href="https://www.w3schools.com/w3css/default.asp" 
+			title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+		</div>
+	<!-- End page content -->
+	</div>
+
+	<script src="js/assign4.js"></script>
+
+</body>
+</html>

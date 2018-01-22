@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Tic Tac Toe</title>
+			<!--
+			Author: Nikola Petrovski 
+			Date created: 19 V 2017
+			Date updated: 22 V 2017
+			Version: 2
+			Source: Ellen Bajcar. Assignment 3, 
+			SYST10049 Web Development, Sheridan College
+			Source: coding4.us
+			Purpose: 
+				Develop and publish a webpage for members to play a 
+				TICTACTOE game that adhere to the given specifications.
+				Assignment 1 for SYST10199 Web Programming at Sheridan 
+				College during Summer 2017 term is the first bit of 
+				experience at writing some JavaScript, in order to gain
+				a basic understanding of what writing a JavaScript 
+				program involves. This is an obtrusive version for 
+				documenting the first splash into JavaScript. The tic
+				tac	toe code from above referenced sources is used for
+				learning purposes only. One of the hardest things to 
+				learn in programming is not the syntax, but how to 
+				apply it to solve real world problems.
+			Description:
+				This assignment shows how to buld up a TICTACTOE Game. 
+				It should choose a random start person between player 
+				"X" and	player "O", then challenge the player to align 
+				three of his/her tokens. After each turn the player 
+				should be told whose turn it is and if there are wrong 
+				overriding entries. The game will end once the player 
+				alignes three tokens correctly, or once they run out of 
+				available entries. When the game ends, the players 
+				are given an option to start playing again.
+			-->
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<style>
+				main {
+					text-align: center;
+						width: 100%;
+				}
+				table {
+					margin: 25px auto;
+					padding: 18px;
+					background-color: white;
+					color: green;
+					font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+				}
+				td {
+					height: 70px;
+					width: 70px;
+					font-size: 2em;
+					font-family: sans-serif;
+					border: 1px solid green;
+					background-color: transparent;
+				}
+				td:nth-child(1) 
+					{border-left-style: none;}
+				td:nth-child(3) 
+					{border-right-style: none;}
+				tr:nth-child(1)>td 
+					{border-top-style: none;}
+				tr:nth-child(3)>td 
+					{border-bottom-style: none;}
+				
+				header 
+					{text-align: center;}
+				footer 
+					{text-align: center;}
+					
+				button, a {
+					background-color: orange;
+					border: 1px #fff solid;
+					border-radius: 5px;
+					color: #fff;
+					cursor: pointer;
+					font-size: 1.2em;
+					padding: 10px 5px;
+					text-decoration: none;
+					width: 180px;
+					margin: 2px;
+				}
+				
+				@media all and ( max-device-width: 640px ) and 
+				( max-width: 640px ){
+					table {
+						width: 100%;
+						margin: 25px auto;
+						padding: 18px;
+						background-color: white;
+						color: GREEN;
+						font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+					}
+					header {
+						display: none;
+						text-align: center;
+					}
+					h3 {		
+						font-size: 2em; 
+						margin:0; 
+						padding:0;
+					}	
+				}
+			</style>
+			
+		</head>
+		
+		<!-- The onload is event attribute. It is used to execute below 
+		JavaScript function immediately after a page has been loaded. 
+		NOTE: Placing scripts at the bottom of the <body> element improves the 
+		display speed, because script compilation slows down the display. 
+		See respective JavaScript comments.-->
+		<body onload="startGame();">
+			<header>
+				<h1>Welcome to TicTacToe</h1>
+				<h2>SYST10199 Web Programming</h2>
+			</header>
+			<main>
+				<!-- The id attribute specifies a unique id for an HTML element
+				(the value must be unique within the HTML document). The 
+				id attribute is most used by JavaScript (via the HTML DOM) to 
+				manipulate the element with the specific id. -->
+				<h3 id="message">Tic Tac Toe</h3>
+				<table>
+					<tr>
+						<!-- Similar to the onclick and id. The class attribute
+						specifies one common classname (SQ) for all 9 <td> 
+						elements. The class attribute is used by the JavaScript
+						(via HTML DOM) to make changes to HTML elements <td>. 
+						The "nextMove(this)" represents a function. It is a 
+						block of code designed to perform particular task 
+						as listed below in the JavaScript comments.-->
+						<td id="s1" class="SQ" onclick="nextMove(this);"></td>
+						<td id="s2" class="SQ" onclick="nextMove(this);"></td>
+						<td id="s3" class="SQ" onclick="nextMove(this);"></td>
+					</tr>
+					<tr>
+						<td id="s4" class="SQ" onclick="nextMove(this);"></td>
+						<td id="s5" class="SQ" onclick="nextMove(this);"></td>
+						<td id="s6" class="SQ" onclick="nextMove(this);"></td>
+					</tr>
+					<tr>
+						<td id="s7" class="SQ" onclick="nextMove(this);"></td>
+						<td id="s8" class="SQ" onclick="nextMove(this);"></td>
+						<td id="s9" class="SQ" onclick="nextMove(this);"></td>
+					</tr>        
+				</table>
+				<!-- The "startGame()" represents a function. 
+				See respective JavaScript comments.-->
+				<p><button onclick="startGame();">Start A Game</button></p>
+				<p><a href="../../index.html" class="button" role="button">Close</a></p>
+			</main>
+			<footer> 
+				<address>Nikola Petrovski, 2017 &copy; 
+				SYST10199 Web Programming, Sheridan College</address>
+			</footer>
+			
+			<script src="js/ttt.js"></script>
+			
+		</body>
+	</html>
