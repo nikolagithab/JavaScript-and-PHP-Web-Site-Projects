@@ -1,217 +1,179 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  <title>Home - Petrovski</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-  color: black;
-}
+  h3 {color:#6ec1e4;font-weight: bold;}
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("images/Sonce.png");
-  min-height: 100%;
-  filter: brightness(0.5);
-  transition: brightness;
-  transition: 3s;
-}
-.bgimg-1:hover {
-  filter: brightness(1);
-}
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+    color: #000000;
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button w3-wide"><img src="images/myLogo.png" alt="Nikola's Logo" style="width:30%"></a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="cv.html" class="w3-bar-item w3-button">CV</a>
-      <a href="apps.html" class="w3-bar-item w3-button">APPLICATIONS</a>
-      <a href="serv.html" class="w3-bar-item w3-button">SERVICES</a>
-      <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">APPLICATIONS</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
-
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:9px">
-    <span class="w3-xxlarge w3-hide-small">Eliminate Data Overload</span><br>
-    <span class="w3-xxlarge w3-hide-small">Organize Information Structures</span><br>
-    <span class="w3-xlarge w3-hide-large w3-hide-medium">Eliminate Data Overload</span><br>
-    <span class="w3-xlarge w3-hide-large w3-hide-medium">Organize Information Structures</span><br>
-
-  </div>
-  <div class="w3-display-bottomright w3-text-grey w3-large" style="padding:24px 48px">
-    <a href="apps.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">APPLICATIONS</a>&nbsp;
-    <a href="serv.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">SERVICES</a>
-  </div>
-</header>
-
-
-
-<!-- Promo Section - "I" -->
-<div class="w3-container" style="padding-top:100px">
-  <div class="w3-row-padding">
-    <div class="w3-half w3-center">
-    <img src="images/myLogo.png" alt="Nikola's Logo">
-    </div>
-    <div class="w3-half w3-center">
-      <iframe width="600" height="350" src="https://www.youtube.com/embed/it-jSj7hA_Y?playlist=it-jSj7hA_Y&autoplay=1&loop=1" alt="code flowing">
-      </iframe>
-    </div>
-  </div>
-</div>
-
-<div class="w3-container" style="margin-left:300px; margin-right:300px">
-<!-- Promo Section - "II" -->
-<div class="w3-container" style="padding-top:100px">
-  <div class="w3-row-padding">
-    <div class="w3-half w3-center">
-      <h3>Advanced Digital and Professional Training Certificate</h3>
-      <a href="#home">Read about Advanced Digital and Professional Training (ADaPT)</a>
-    </div>
-    <div class="w3-half w3-center">
-      <img width="300" height="200" src="images/Logo Ryerson.jpeg" alt="Ryerson Logo" style="border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section - "III" -->
-<div class="w3-container" style="padding-top:100px">
-  <div class="w3-row-padding">
-    <div class="w3-half w3-center">
-      <img width="300" height="200"src="images/Logo Sheridan.jpeg" alt="Sheridan Logo" style="border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
-    </div>
-    <div class="w3-half w3-center">
-      <h3>Computer Programmer Diploma</h3>
-      <a href="#home">Read about Faculty of Applied Sciences & Technology Courses (FAST)</a>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section - "IV" -->
-<div class="w3-container" style="padding-top:100px; padding-bottom:100px">
-  <div class="w3-row-padding">
-    <div class="w3-half w3-center">
-      <h3>Manufacturing Technology Diploma</h3>
-      <a href="#home">Read about Pharmaceutical Manufacturing Technology Program</a>
-    </div>
-    <div class="w3-half w3-center">
-      <img width="300" height="200" src="images/Logo TIPT.jpeg" alt="TIPT Logo" style="border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-9">
-  <div class="w3-container" style="padding:6px 6px" id="aaaaa">
-    <div class="w3-row-padding w3-center" style="margin-top:6px">
-      <div class="w3-third">
-        <div class="w3-half">
-        	<p class="w3-large">ABOUT</p>
-        	<a href="#home">About</><br>
-            <a href="#home">Curriculum Vitae</a><br>
-            <a href="#home">Resume</a>
-        </div>
-        <div class="w3-half">
-          <p class="w3-large">APPLICATIONS</p>
-          <a href="#home">J2EE MVC</a><br>
-          <a href="#home">Java OpenGL</a><br>
-          <a href="#home">Linux Users</a>
-        </div>
-      </div>
-
-      <div class="w3-third">
-        <div class="w3-half">
-        	<p class="w3-large">GAMES</p>
-        	<a href="#home">TicTacToe</a><br>
-            <a href="#home">Ultimate TTT</a><br>
-            <a href="#home">R-P-S</a>
-        </div>
-        <div class="w3-half">
-          <p class="w3-large">SERVICES</p>
-          <a href="#home">Programming</a><br>
-          <a href="#home">DataBase Support</a><br>
-          <a href="#home">Network Support</a>
-        </div>
-      </div>
-
-      <div class="w3-third">
-        <div class="w3-half">
-        	<p class="w3-large">SERVICES</p>
-        	<a href="#home">Tech. Docs</a><br>
-            <a href="#home">Help Desk</a><br>
-            <a href="#home">Digital Design</a>
-        </div>
-        <div class="w3-half">
-        	<p><i class="fa fa-youtube w3-hover-opacity"></i><br>
-        	<i class="fa fa-linkedin w3-hover-opacity"></i></p>
-            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up"></i></a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
-
-<script>
-
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
   }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+  #sun {
+    background-image: url("images/myLogo.png"), url("images/Sonce.png") ;
+    background-position: top, top;
+    background-repeat: no-repeat, no-repeat;
+  }
+  </style>
 
-</body>
+  <body>
+    <!-- LOGO & NAV-BAR -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white"><img src="images/myLogo1.png"></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small" style="padding:20px">
+          <a href="#home" class="w3-bar-item w3-button w3-hover-white">ABOUT</a>
+          <a href="#home" class="w3-bar-item w3-button w3-hover-white">CV</a>
+          <a href="#home" class="w3-bar-item w3-button w3-hover-white">APPS</a>
+          <a href="#home" class="w3-bar-item w3-button w3-hover-white">WORK</a>
+          <a href="#home" class="w3-bar-item w3-button w3-hover-white">CONTACT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Sidebar on small screens when clicking the fa fa menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">APPLICATIONS</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Cover image -->
+    <header  style="margin-top: 90px">
+      <div class="w3-container" id="sun">
+        <h1 class="w3-panel w3-text-white w3-center" style="padding: 130px 00px 50px 00px;">Organize information<br>so your business is success</h1>
+        <div class="w3-panel w3-bar w3-center" style="padding: 100px 00px 50px 00px;">
+          <a class="w3-button w3-center w3-margin w3-transparent w3-text-white w3-hover-text-blue w3-large" href="apps.html"
+          style="padding:10px 30px 10px 30px;box-sizing: border-box;border: 2px solid white;border-radius: 10px;">APPLICATIONS</a>
+          <a class="w3-button w3-center w3-margin w3-light-blue w3-text-white w3-hover-text-blue w3-large w3-hover-transparent" href="serv.html"
+          style="padding:12px 32px 12px 32px;box-sizing: border-box;border: 2px solid light-blue;border-radius: 10px;">SERVICES</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Logo&code film-->
+    <div class="w3-row w3-section">
+      <div class="w3-half w3-center">
+        <img src="images/myLogo.png" alt="Nikola's Logo">
+      </div>
+      <div class="w3-half w3-center w3-green" style="position:relative;padding-top:28.12%;">
+        <iframe src="https://www.youtube.com/embed/it-jSj7hA_Y?playlist=it-jSj7hA_Y&autoplay=1&loop=1" frameborder="0" allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+    </div>
+
+    <!-- university/colleges images buttons -->
+    <div class="w3-auto">
+      <!-- Ryerson University" -->
+      <div class="w3-row w3-border" style="padding: 80px 0px 0px 0px;">
+        <div class="w3-container w3-half">
+          <h3>Advanced Digital and Professional Training (ADaPT) Program</h3>
+          <p>Read about my digital and professional skills</p>
+          <a class="w3-button w3-light-blue w3-text-white" href="#home">Read more</a>
+        </div>
+        <div class="w3-container w3-half">
+          <img class="w3-image" src="images/ryerson_logo.png" alt="Ryerson Logo"
+          style="max-height: 300px; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+      </div>
+      <!-- Sheridan College -->
+      <div class="w3-row w3-border"  style="padding: 80px 0px 0px 0px;">
+        <div class="w3-container w3-half">
+          <img class="w3-image" src="images/sheridan_logo.png" alt="Sheridan Logo"
+          style="max-height: 300px; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: -10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+        <div class="w3-container w3-half">
+          <h3>Faculty of Applied Sciences & Technology (FAST)</h3>
+          <p>Read about my computer programming course of studies</p>
+          <a class="w3-button w3-light-blue w3-text-white" href="#home">Read more</a>
+        </div>
+      </div>
+      <!-- TIPT College -->
+      <div class="w3-row w3-border"  style="padding: 80px 0px 80px 0px;">
+        <div class="w3-container w3-half">
+          <h3>Pharmaceutical Production</h3>
+          <p>Read about my manufacturing technology experience</p>
+          <a class="w3-button w3-light-blue w3-text-white" href="#home">Read more</a>
+        </div>
+        <div class="w3-container w3-half">
+          <img class="w3-image" src="images/tipt_logo.png" alt="TIPT Logo"
+          style="max-height: 300px; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-blue w3-text-white">
+      <div class="w3-row">
+        <div class="w3-col m2 ">
+          <p>ABOUT</p>
+          <a href="#home" style="color: #000000; text-decoration: none;"><span>About</span></a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">CV</span></a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">Resume</span></a>
+        </div>
+        <div class="w3-col m2">
+          <p>APPS</p>
+          <a href="#home"  style="color: #000000; text-decoration: none;">J2EE MVC</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Java OpenGL</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Linux Users</a>
+        </div>
+        <div class="w3-col m2">
+          <p>GAMES</p>
+          <a href="#home"  style="color: #000000; text-decoration: none;">TicTacToe</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Ultimate TTT</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">R-P-S</a>
+        </div>
+        <div class="w3-col m2">
+          <p>SERVICES</p>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Programming</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">DataBases</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Networks</a>
+        </div>
+        <div class="w3-col m2">
+          <p>SERVICES</p>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Tech. Docs</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Help Desk</a><br>
+          <a href="#home"  style="color: #000000; text-decoration: none;">Digital Design</a>
+        </div>
+        <div class="w3-col m2">
+          <a href="https://www.youtube.com/channel/UC4uxHGJmtLtKSrtkzT9wTiQ/videos" class="w3-xxlarge" target="_blank"><i class="fa fa-youtube w3-margin-top w3-margin-right"></i></a>
+          <a href="https://www.linkedin.com/in/nikola-petrovski/" class="w3-xxlarge"  target="_blank"><i class="fa fa-linkedin w3-margin-top"></i></a><br>
+          <a href="index.html" class="w3-button"><i class="fa fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+        } else {
+          mySidebar.style.display = 'block';
+        }
+      }
+      // Close the sidebar with the close button
+      function w3_close() {
+          mySidebar.style.display = "none";
+      }
+    </script>
+
+  </body>
 </html>
