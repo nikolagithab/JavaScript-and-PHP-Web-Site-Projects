@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <title>Home - Petrovski</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,31 +7,72 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-  h3 {color:#6ec1e4;font-weight: bold;}
-
+  body {
+    font-family: "Tahoma", sans-serif;
+    color: #7a7a7a;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    color: #6ec1e4;
+  }
+  h3 {
+    line-height: 1;
+  }
   body, html {
     height: 100%;
     line-height: 1.8;
-    color: #000000;
-
   }
-
-  #sun {
-    background-image: url("images/myLogo.png"), url("images/Sonce.png") ;
-    background-position: top, top;
-    background-repeat: no-repeat, no-repeat;
+  /* Full height image header */
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/Sonce.png");
+    min-height: 100%;
+  }
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  /*button to scroll to top*/
+  #myBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 99;
+    box-sizing: content-box;
+    padding: 0px;
+  }
+#myBtn:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+#conta {
+    position:relative;
+    z-index:0;
+  }
+#overlay {
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:1;
   }
   </style>
 
   <body>
-    <!-- LOGO & NAV-BAR -->
-    <div class="w3-top">
-      <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-hover-white"><img src="images/myLogo1.png"></a>
+    <!-- NAV-BAR -->
+    <div id="navbar">
+      <div class="w3-bar w3-white">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white"><img class="w3-image" src="images/myLogo.png" alt="logo" style="width:30%; display: block;margin-left: auto;
+  margin-right: auto;"></a>
         <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small" style="padding:20px">
+        <div class="w3-right w3-hide-small" style="padding-top: 16px;">
           <a href="#home" class="w3-bar-item w3-button w3-hover-white">ABOUT</a>
           <a href="#home" class="w3-bar-item w3-button w3-hover-white">CV</a>
           <a href="#home" class="w3-bar-item w3-button w3-hover-white">APPS</a>
@@ -54,66 +95,109 @@
       <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
     </nav>
 
-    <!-- Cover image -->
-    <header  style="margin-top: 90px">
-      <div class="w3-container" id="sun">
-        <h1 class="w3-panel w3-text-white w3-center" style="padding: 130px 00px 50px 00px;">Organize information<br>so your business is success</h1>
-        <div class="w3-panel w3-bar w3-center" style="padding: 100px 00px 50px 00px;">
-          <a class="w3-button w3-center w3-margin w3-transparent w3-text-white w3-hover-text-blue w3-large" href="apps.html"
-          style="padding:10px 30px 10px 30px;box-sizing: border-box;border: 2px solid white;border-radius: 10px;">APPLICATIONS</a>
-          <a class="w3-button w3-center w3-margin w3-light-blue w3-text-white w3-hover-text-blue w3-large w3-hover-transparent" href="serv.html"
-          style="padding:12px 32px 12px 32px;box-sizing: border-box;border: 2px solid light-blue;border-radius: 10px;">SERVICES</a>
-        </div>
+    <!-- button to scroll to top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container" id="home">
+      <div class="w3-display-topmiddle" style="padding-top: 30px">
+        <img class="w3-image" src="images/myLogo.png" alt="logo" style="width:30%; display: block;margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="w3-display-topmiddle  w3-text-white w3-center" style="padding-top: 150px">
+        <strong class="w3-xxxlarge w3-hide-small w3-hide-medium">Organize information</strong>
+        <strong class="w3-xxlarge w3-hide-large">Organize information</strong><br>
+        <strong class="w3-xxlarge  w3-hide-small w3-hide-medium">so your business is success</strong>
+        <strong class="w3-xlarge w3-hide-large">so your business is success</strong>
+      </div>
+      <div class="w3-display-bottommiddle w3-center" style="padding-bottom: 50px">
+        <a class="w3-button w3-center w3-margin w3-transparent w3-text-white w3-hover-text-blue w3-large" href="apps.html"
+        style="padding:10px 30px 10px 30px;box-sizing: border-box;border: 2px solid white;border-radius: 10px;">APPLICATIONS</a>
+        <a class="w3-button w3-center w3-margin w3-light-blue w3-text-white w3-hover-text-blue w3-large w3-hover-border-blue" href="serv.html"
+        style="padding:12px 30px 12px 32px;box-sizing: border-box;border: 2px solid #6ec1e4;border-radius: 10px;">SERVICES</a>
       </div>
     </header>
 
     <!-- Logo&code film-->
-    <div class="w3-row w3-section">
+    <div class="w3-row w3-section" style="padding-top: 100px">
       <div class="w3-half w3-center">
         <img src="images/myLogo.png" alt="Nikola's Logo">
       </div>
-      <div class="w3-half w3-center w3-green" style="position:relative;padding-top:28.12%;">
-        <iframe src="https://www.youtube.com/embed/it-jSj7hA_Y?playlist=it-jSj7hA_Y&autoplay=1&loop=1" frameborder="0" allowfullscreen
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      <div id="conta" class="w3-half">
+        <video controls autoplay loop style="width:100%;height:auto;z-index:0;">
+          <source src="media/apps-developer.mp4" type="video/mp4">
+        </video>
+        <div id="overlay" class="w3-panel w3-bar w3-red w3-border-pale-red">
+          <p style="text-align: center;font-size: 1.5vw;font-weight: 900;font-variant: small-caps;color:white;">Organised professional with broad industry experience, computer science background and excellent communication skills</p>
+        </div>
       </div>
     </div>
 
-    <!-- university/colleges images buttons -->
-    <div class="w3-auto">
-      <!-- Ryerson University" -->
-      <div class="w3-row" style="padding: 80px 0px 0px 0px;">
-        <div class="w3-container w3-half">
+    <!-- responsive rows -->
+    <div class="w3-auto" style="padding-top: 100px">
+      <div class="w3-row">
+        <!-- medium/large viewport -->
+        <div class="w3-container w3-half w3-hide-small" style="padding-left:100px">
+          <h3>Advanced Digital and Professional Training (ADaPT) Program</h3>
+          <p>Read about my digital and professional skills</p>
+          <a class="w3-button w3-light-blue w3-text-white w3-hover-black" href="#home">Read more</a>
+        </div>
+        <div class="w3-container w3-half w3-left-align w3-hide-small">
+          <img class="w3-image" src="images/ryerson_logo.png" alt="Ryerson Logo"
+          style="width: 85%; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+        <!-- small viewport only -->
+        <div class="w3-container w3-half w3-center w3-hide-medium w3-hide-large">
+          <img class="w3-image" src="images/ryerson_logo.png" alt="Ryerson Logo"
+          style="width: 85%; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+        <div class="w3-container w3-half w3-center w3-hide-medium w3-hide-large">
           <h3>Advanced Digital and Professional Training (ADaPT) Program</h3>
           <p>Read about my digital and professional skills</p>
           <a class="w3-button w3-light-blue w3-text-white" href="#home">Read more</a>
         </div>
-        <div class="w3-container w3-half">
-          <img class="w3-image" src="images/ryerson_logo.png" alt="Ryerson Logo"
-          style="max-height: 300px; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
-        </div>
       </div>
-      <!-- Sheridan College -->
       <div class="w3-row"  style="padding: 80px 0px 0px 0px;">
-        <div class="w3-container w3-half">
+        <!-- medium/large viewport -->
+        <div class="w3-container w3-half w3-right-align w3-hide-small">
           <img class="w3-image" src="images/sheridan_logo.png" alt="Sheridan Logo"
-          style="max-height: 300px; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: -10px 10px 20px 0px rgba(0,0,0,0.12)">
+          style="width: 85%; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: -10px 10px 20px 0px rgba(0,0,0,0.12)">
         </div>
-        <div class="w3-container w3-half">
+        <div class="w3-container w3-half w3-hide-small" style="padding-right:100px">
+          <h3>Faculty of Applied Sciences & Technology (FAST)</h3>
+          <p>Read about my computer programming course of studies</p>
+          <a class="w3-button w3-light-blue w3-text-white w3-hover-black" href="#home">Read more</a>
+        </div>
+        <!-- small viewport only -->
+        <div class="w3-container w3-half w3-center w3-hide-medium w3-hide-large">
+          <img class="w3-image" src="images/sheridan_logo.png" alt="Sheridan Logo"
+          style="width: 85%; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: -10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+        <div class="w3-container w3-half w3-center w3-hide-medium w3-hide-large">
           <h3>Faculty of Applied Sciences & Technology (FAST)</h3>
           <p>Read about my computer programming course of studies</p>
           <a class="w3-button w3-light-blue w3-text-white" href="#home">Read more</a>
         </div>
       </div>
-      <!-- TIPT College -->
       <div class="w3-row"  style="padding: 80px 0px 80px 0px;">
-        <div class="w3-container w3-half">
+        <!-- medium/large viewport -->
+        <div class="w3-container w3-half w3-hide-small" style="padding-left:100px">
+          <h3>Pharmaceutical Production</h3>
+          <p>Read about my manufacturing technology experience</p>
+          <a class="w3-button w3-light-blue w3-text-white w3-hover-black" href="#home">Read more</a>
+        </div>
+        <div class="w3-container w3-half w3-left-align w3-hide-small">
+          <img class="w3-image" src="images/tipt_logo.png" alt="TIPT Logo"
+          style="width: 85%; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+        <!-- small viewport only -->
+        <div class="w3-container w3-half w3-center w3-hide-medium w3-hide-large">
+          <img class="w3-image" src="images/tipt_logo.png" alt="TIPT Logo"
+          style="width: 85%; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
+        </div>
+        <div class="w3-container w3-half w3-center w3-hide-medium w3-hide-large">
           <h3>Pharmaceutical Production</h3>
           <p>Read about my manufacturing technology experience</p>
           <a class="w3-button w3-light-blue w3-text-white" href="#home">Read more</a>
-        </div>
-        <div class="w3-container w3-half">
-          <img class="w3-image" src="images/tipt_logo.png" alt="TIPT Logo"
-          style="max-height: 300px; border-style: solid; border-width: 10px; border-color: #fff; box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.12)">
         </div>
       </div>
     </div>
@@ -152,14 +236,24 @@
           <a href="#home"  style="color: #000000; text-decoration: none;">Digital Design</a>
         </div>
         <div class="w3-col m2">
-          <a href="https://www.youtube.com/channel/UC4uxHGJmtLtKSrtkzT9wTiQ/videos" class="w3-xxlarge" target="_blank"><i class="fa fa-youtube w3-margin-top w3-margin-right"></i></a>
-          <a href="https://www.linkedin.com/in/nikola-petrovski/" class="w3-xxlarge"  target="_blank"><i class="fa fa-linkedin w3-margin-top"></i></a><br>
-          <a href="index.html" class="w3-button"><i class="fa fa-arrow-up"></i></a>
+          <a href="https://www.youtube.com/channel/UC4uxHGJmtLtKSrtkzT9wTiQ/videos" class="w3-xlarge" target="_blank"><i class="fa fa-youtube w3-margin-top"></i></a><br>
+          <a href="https://www.linkedin.com/in/nikola-petrovski/" class="w3-xlarge"  target="_blank"><i class="fa fa-linkedin w3-margin-top"></i></a><br>
         </div>
       </div>
     </footer>
 
     <script>
+      // When the user scrolls down 50px from the top of the document, hide the navbar
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
       // Toggle between showing and hiding the sidebar when clicking the menu icon
       var mySidebar = document.getElementById("mySidebar");
       function w3_open() {
@@ -172,6 +266,20 @@
       // Close the sidebar with the close button
       function w3_close() {
           mySidebar.style.display = "none";
+      }
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
 
