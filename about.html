@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home - Petrovski</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6  {
+  font-family: "Tahoma", sans-serif;
+  color: #000;
+}
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+/*button to scroll to top*/
+#myBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  z-index: 99;
+  box-sizing: content-box;
+  padding: 0px;
+}
+#myBtn:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+</style>
+
+<body>
+  <!-- NAV-BAR -->
+  <div id="navbar">
+    <div class="w3-bar w3-white">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-white"><img class="w3-image" src="images/myLogo.png" alt="logo" style="width:20%; display: block;box-sizing:border-box;padding:0px;margin:0px;"></a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small" style="padding-top: 16px;">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white">ABOUT</a>
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white">CV</a>
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white">APPS</a>
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white">WORK</a>
+        <a href="#home" class="w3-bar-item w3-button w3-hover-white">CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-hover-white" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Sidebar on small screens when clicking the fa fa menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-16">Close ×</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+
+  <!-- button to scroll to top -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- Header with full-height image -->
+  <header class="w3-auto w3-center" id="home">
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">About Me</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">About Me</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">About Me</strong>
+    </div>
+    <div>
+      <img class="w3-image" src="images/gala.png" alt="world postcard" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+  </header>
+
+  <!-- responsive rows -->
+  <div class="w3-auto w3-justify w3-padding" style="font-size: 2vw;">
+    <div class="w3-container w3-center" style="display:block;">
+      <a class="w3-button w3-center w3-margin w3-light-blue w3-text-white w3-hover-text-light-blue w3-large w3-hover-white" href="https://www.linkedin.com/in/nikola-petrovski/" target="_blank"
+      style="padding:10px 30px 10px 30px;box-sizing: border-box;border: 2px solid #6ec1e4;border-radius: 10px;">Nikola's LinkedIn</a>
+      <a class="w3-button w3-center w3-margin w3-light-blue w3-text-white w3-hover-text-light-blue w3-large w3-hover-white" href="media/NikolasResume.pdf" download
+      style="padding:10px 30px 10px 32px;box-sizing: border-box;border: 2px solid #6ec1e4;border-radius: 10px;">Nikola's Résumé</a>
+    </div>
+    <hr>
+    <p>My story began 19 years ago in Scarborough, Ontario when I immigrated from Macedonia. I had a passion for technology and few part-time jobs to get me started. My vision was simple – to apply my skills and knowledge in a world-class economy.</p>
+    <p>I was an international student. I served tables in banquet facilities, took drive-thru orders at Tim Hortons, completed cash register transactions for clothing retailers – and managed to graduate with distinction from a private college for pharmaceutical manufacturing technology. Despite struggling in the first 5 years, I gained valuable customer service and technical skills.</p>
+    <p>Some of my first hi-tech  placements included liquids packaging technician and solid-dose manufacturing technician roles at GlaxoSmithKline in Mississauga, Ontario.</p>
+    <p>My career further developed through providing contract pharmaceutical manufacturing services as packaging engineering specialist at Patheon in Mississauga, Ontario. The product development functions I supported there are different than software development processes – but the methodology used in problem analysis, product design, technical documentation and quality standards are the same. To me, there is no greater value than fostering a quality culture. It’s my belief that details create quality product.</p>
+    <p>When my previous company restructured, my position was terminated. But I moved on with my career to Sheridan’s Faculty of Applied Science and Technology in Oakville, Ontario. I chose a new computer programmer occupation because I love automation of business processes by combining the power of IT with an in-dept understanding of business. I learned. I worked hard. And I re-qualified.</p>
+    <p>Over my 19-year journey, the industry has become more information-driven and sophisticated, but so have I. By graduating from two colleges and immersing myself in the industry I have expanded my technical skills and specialized in new areas of information communication technology.</p>
+    <p>Today I am proud to say that I have  been selected for the Ryerson University Advanced Digital and Professional Training (ADaPT) internship program.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-light-blue w3-text-white" style="padding-bottom:60px">
+    <div class="w3-row">
+      <div class="w3-col m2 ">
+        <p>ABOUT</p>
+        <a href="about.html" style="color: #000000; text-decoration: none;"><span>About</span></a><br>
+        <a href="cv.html"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">CV</span></a><br>
+        <a href="resume.html"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">Resume</span></a>
+      </div>
+      <div class="w3-col m2">
+        <p>APPS</p>
+        <a href="rose.html"  style="color: #000000; text-decoration: none;">J2EE MVC</a><br>
+        <a href="star.html"  style="color: #000000; text-decoration: none;">Java OpenGL</a><br>
+        <a href="bash.html"  style="color: #000000; text-decoration: none;">Linux Users</a>
+      </div>
+      <div class="w3-col m2">
+        <p>GAMES</p>
+        <a href="ttt.html"  style="color: #000000; text-decoration: none;">TicTacToe</a><br>
+        <a href="ultimate.html"  style="color: #000000; text-decoration: none;">Ultimate TTT</a><br>
+        <a href="r-p-s.html"  style="color: #000000; text-decoration: none;">R-P-S</a>
+      </div>
+      <div class="w3-col m2">
+        <p>SERVICES</p>
+        <a href="program.html"  style="color: #000000; text-decoration: none;">Programming</a><br>
+        <a href="database.html"  style="color: #000000; text-decoration: none;">DataBases</a><br>
+        <a href="network.html"  style="color: #000000; text-decoration: none;">Networks</a>
+      </div>
+      <div class="w3-col m2">
+        <p>SERVICES</p>
+        <a href="document.html"  style="color: #000000; text-decoration: none;">Tech. Docs</a><br>
+        <a href="support.html"  style="color: #000000; text-decoration: none;">Help Desk</a><br>
+        <a href="web.html"  style="color: #000000; text-decoration: none;">Web Design</a>
+      </div>
+      <div class="w3-col m2">
+        <a href="https://www.youtube.com/channel/UC4uxHGJmtLtKSrtkzT9wTiQ/videos" class="w3-xlarge" target="_blank"><i class="fa fa-youtube w3-margin-top"></i></a><br>
+        <a href="https://www.linkedin.com/in/nikola-petrovski/" class="w3-xlarge"  target="_blank"><i class="fa fa-linkedin w3-margin-top"></i></a><br>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // When the user scrolls down 50px from the top of the document, hide the navbar
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+  }
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+</body>
+</html>
