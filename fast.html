@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Home - Petrovski</title>
+<title>FAST - Petrovski</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -49,11 +49,11 @@ body, html {
       <a href="index.html" class="w3-bar-item w3-button w3-hover-white"><img class="w3-image" src="images/myLogo.png" alt="logo" style="width:20%; display: block;box-sizing:border-box;padding:0px;margin:0px;"></a>
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small" style="padding-top: 16px;">
-        <a href="#home" class="w3-bar-item w3-button w3-hover-white">ABOUT</a>
-        <a href="#home" class="w3-bar-item w3-button w3-hover-white">CV</a>
-        <a href="#home" class="w3-bar-item w3-button w3-hover-white">APPS</a>
-        <a href="#home" class="w3-bar-item w3-button w3-hover-white">WORK</a>
-        <a href="#home" class="w3-bar-item w3-button w3-hover-white">CONTACT</a>
+        <a href="about.html" class="w3-bar-item w3-button w3-hover-white">ABOUT</a>
+        <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+        <a href="apps.html" class="w3-bar-item w3-button w3-hover-white">APPS</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-white">WORK</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hover-white">CONTACT</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-hover-white" onclick="w3_open()">
@@ -64,11 +64,11 @@ body, html {
   <!-- Sidebar on small screens when clicking the fa fa menu icon -->
   <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-16">Close ×</a>
-    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
-    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
-    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
-    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
+    <a href="apps.html" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
+    <a href="work.html" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
   </nav>
 
   <!-- button to scroll to top -->
@@ -78,17 +78,18 @@ body, html {
   <header class="w3-auto w3-center" id="home">
     <div class=" w3-text-black w3-center w3-margin">
       <strong class="w3-xxlarge w3-hide-small w3-hide-medium">Course of Studies Completed</strong>
-      <strong class="w3-xlarge w3-hide-large">Course of Studies Completed</strong><br>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large">Course of Studies Completed</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium">Course of Studies Completed</strong>
     </div>
     <div>
       <img class="w3-image" src="images/fast.png" alt="fast postcard" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
     </div>
   </header>
 
-  <!-- responsive rows -->
-  <div class="w3-auto" style="padding:50px 50px 50px 50px">
-    <h3 class="w3-center w3-margin">Computer Programmer Program</h3>
-    <ul class="w3-mobile w3-text-black">
+  <!-- responsive centered container -->
+  <div class="w3-auto w3-center" style="font-size: 2vw;padding:50px 0px">
+    <h3 class="w3-margin">Computer Programmer Program</h3>
+    <ul class="w3-text-black">
       <li>Enterprise Java Development PROG 32758</li>
       <li>Object Oriented Method-UML SYST 39409</li>
       <li>Systems Analysis and Design SYST 28515</li>
@@ -124,7 +125,7 @@ body, html {
         <p>ABOUT</p>
         <a href="about.html" style="color: #000000; text-decoration: none;"><span>About</span></a><br>
         <a href="cv.html"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">CV</span></a><br>
-        <a href="resume.html"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">Resume</span></a>
+        <a href="media/NikolasResume.pdf" download  style="color: #000000; text-decoration: none;"><span style="color: #000000;">Resume</span></a>
       </div>
       <div class="w3-col m2">
         <p>APPS</p>
@@ -135,18 +136,18 @@ body, html {
       <div class="w3-col m2">
         <p>GAMES</p>
         <a href="ttt.html"  style="color: #000000; text-decoration: none;">TicTacToe</a><br>
-        <a href="ultimate.html"  style="color: #000000; text-decoration: none;">Ultimate TTT</a><br>
-        <a href="r-p-s.html"  style="color: #000000; text-decoration: none;">R-P-S</a>
+        <a href="uttt.html"  style="color: #000000; text-decoration: none;">Ultimate TTT</a><br>
+        <a href="rps.html"  style="color: #000000; text-decoration: none;">R-P-S</a>
       </div>
       <div class="w3-col m2">
         <p>SERVICES</p>
         <a href="program.html"  style="color: #000000; text-decoration: none;">Programming</a><br>
-        <a href="database.html"  style="color: #000000; text-decoration: none;">DataBases</a><br>
-        <a href="network.html"  style="color: #000000; text-decoration: none;">Networks</a>
+        <a href="db.html"  style="color: #000000; text-decoration: none;">DataBases</a><br>
+        <a href="net.html"  style="color: #000000; text-decoration: none;">Networks</a>
       </div>
       <div class="w3-col m2">
         <p>SERVICES</p>
-        <a href="document.html"  style="color: #000000; text-decoration: none;">Tech. Docs</a><br>
+        <a href="doc.html"  style="color: #000000; text-decoration: none;">Tech. Docs</a><br>
         <a href="support.html"  style="color: #000000; text-decoration: none;">Help Desk</a><br>
         <a href="web.html"  style="color: #000000; text-decoration: none;">Web Design</a>
       </div>

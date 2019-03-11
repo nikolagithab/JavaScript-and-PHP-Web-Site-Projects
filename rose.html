@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Rose - Petrovski</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6  {
+  font-family: "Tahoma", sans-serif;
+  color: #000;
+}
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+/*button to scroll to top*/
+#myBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  z-index: 99;
+  box-sizing: content-box;
+  padding: 0px;
+}
+#myBtn:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+</style>
+
+<body>
+  <!-- NAV-BAR -->
+  <div id="navbar">
+    <div class="w3-bar w3-white">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-white"><img class="w3-image" src="images/myLogo.png" alt="logo" style="width:20%; display: block;box-sizing:border-box;padding:0px;margin:0px;"></a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small" style="padding-top: 16px;">
+        <a href="about.html" class="w3-bar-item w3-button w3-hover-white">ABOUT</a>
+        <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+        <a href="apps.html" class="w3-bar-item w3-button w3-hover-white">APPS</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-white">WORK</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hover-white">CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-hover-white" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Sidebar on small screens when clicking the fa fa menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-16">Close ×</a>
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
+    <a href="apps.html" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
+    <a href="work.html" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+
+  <!-- button to scroll to top -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- Header with full-height image -->
+  <header class="w3-auto w3-center" id="home">
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">J2EE Web Program</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">J2EE Web Program</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">J2EE Web Program</strong>
+    </div>
+    <div>
+      <img class="w3-image" src="images/rose1.png" alt="rose postcard" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+  </header>
+
+  <!-- responsive section -->
+  <div class="w3-auto w3-justify w3-padding" style="font-size: 0.9em;">
+    <hr>
+    <p>Web application that can be used to book banquet halls called the Rose Banquet Halls Booking System. The system can be used to store a number of halls, clients, and bookings. It offers create, retrieve, update, and delete functions for all clients, halls, and bookings. To create a booking the user should book a hall to a client on a specific date. If the hall is already booked on that date, the system will reject the booking and will inform the user to change the hall or date.</p>
+    <p>SYSTEM REQUIREMENTS: A computer with Java, MySQL Server and MySQL Connector.</p>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose2.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">Web Pages</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">Web Pages</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">Web Pages</strong>
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose3.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose4.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose5.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose6.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose7.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose8.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose9.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose10.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose11.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose12.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose13.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose14.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose15.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose16.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose17.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">Beans</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">Beans</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">Beans</strong>
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose18.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose19.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose20.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">Style Sheets</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">Style Sheets</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">Style Sheets</strong>
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose21.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">Controllers</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">Controllers</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">Controllers</strong>
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose22.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose23.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose24.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">Data Access Objects</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">Data Access Objects</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">Data Access Objects</strong>
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose25.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose26.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose27.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose28.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <div class=" w3-text-black w3-center w3-margin">
+      <strong class="w3-xxlarge w3-hide-small w3-hide-medium w3-text-light-blue">MySQL Database</strong>
+      <strong class="w3-xlarge w3-hide-small w3-hide-large w3-text-light-blue">MySQL Database</strong>
+      <strong class="w3-large w3-hide-large w3-hide-medium w3-text-light-blue">MySQL Database</strong>
+    </div>
+    <hr>
+    <div>
+      <img class="w3-image" src="images/rose29.png" alt="rose package" style="width:50%; display: block;margin-left: auto; margin-right: auto;">
+    </div>
+    <hr>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-light-blue w3-text-white" style="padding-bottom:60px">
+    <div class="w3-row">
+      <div class="w3-col m2 ">
+        <p>ABOUT</p>
+        <a href="about.html" style="color: #000000; text-decoration: none;"><span>About</span></a><br>
+        <a href="cv.html"  style="color: #000000; text-decoration: none;"><span style="color: #000000;">CV</span></a><br>
+        <a href="media/NikolasResume.pdf" download  style="color: #000000; text-decoration: none;"><span style="color: #000000;">Resume</span></a>
+      </div>
+      <div class="w3-col m2">
+        <p>APPS</p>
+        <a href="rose.html"  style="color: #000000; text-decoration: none;">J2EE MVC</a><br>
+        <a href="star.html"  style="color: #000000; text-decoration: none;">Java OpenGL</a><br>
+        <a href="bash.html"  style="color: #000000; text-decoration: none;">Linux Users</a>
+      </div>
+      <div class="w3-col m2">
+        <p>GAMES</p>
+        <a href="ttt.html"  style="color: #000000; text-decoration: none;">TicTacToe</a><br>
+        <a href="uttt.html"  style="color: #000000; text-decoration: none;">Ultimate TTT</a><br>
+        <a href="rps.html"  style="color: #000000; text-decoration: none;">R-P-S</a>
+      </div>
+      <div class="w3-col m2">
+        <p>SERVICES</p>
+        <a href="program.html"  style="color: #000000; text-decoration: none;">Programming</a><br>
+        <a href="db.html"  style="color: #000000; text-decoration: none;">DataBases</a><br>
+        <a href="net.html"  style="color: #000000; text-decoration: none;">Networks</a>
+      </div>
+      <div class="w3-col m2">
+        <p>SERVICES</p>
+        <a href="doc.html"  style="color: #000000; text-decoration: none;">Tech. Docs</a><br>
+        <a href="support.html"  style="color: #000000; text-decoration: none;">Help Desk</a><br>
+        <a href="web.html"  style="color: #000000; text-decoration: none;">Web Design</a>
+      </div>
+      <div class="w3-col m2">
+        <a href="https://www.youtube.com/channel/UC4uxHGJmtLtKSrtkzT9wTiQ/videos" class="w3-xlarge" target="_blank"><i class="fa fa-youtube w3-margin-top"></i></a><br>
+        <a href="https://www.linkedin.com/in/nikola-petrovski/" class="w3-xlarge"  target="_blank"><i class="fa fa-linkedin w3-margin-top"></i></a><br>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // When the user scrolls down 50px from the top of the document, hide the navbar
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+  }
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+</body>
+</html>
